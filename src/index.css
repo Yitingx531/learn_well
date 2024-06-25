@@ -8,6 +8,11 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.appContainer {
+  min-width: 375px;
+  width: 100%;
+  box-sizing: border-box;
 }
