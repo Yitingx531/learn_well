@@ -34,11 +34,6 @@ Learn Well is a simple web application developed for an EdTech company that allo
     npm install
     ```
 
-3. Create a `.env` file in the root directory with the following content:
-    ```env
-    REACT_APP_URL=your_api_url_here
-    ```
-
 ### Running the Application
 
 1. Start the development server:
