@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# learn_well
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Learn Well is a simple web application developed for an EdTech company that allows users to create, comment on, and watch educational videos. The application is built using React and interacts with a backend API to provide a seamless and engaging experience for users.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Show a list of videos and allow users to select a video from the list.
+- Allow users to create a new video object with a title, description, and a video URL.
+- Users can comment on videos and view comments from other users.
+- Open videos in full screen with full playback functionality.
+- Options for adjusting playback speed and volume.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js
+- npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/Yitingx531/learn_well.git
+    cd learn_well
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Running the Application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Start the development server:
+    ```sh
+    npm start
+    ```
 
-### `npm run eject`
+2. Open your browser and navigate to:
+    ```
+    http://localhost:3000
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Notes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- As I do not have local videos to upload, I used YouTube video URLs to create new videos.
+- Use your first and last name in snake case as your `user_id` for creating video objects (e.g., John Smith: john_smith).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Screenshots
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Home Page
+![Screenshot 2024-06-25 at 7 27 27 PM](https://github.com/Yitingx531/learn_well/assets/119069886/d99cb871-952a-4733-9754-75081e0639c0)
 
-## Learn More
+Page to play single video and display comments, and add comments
+![Screenshot 2024-06-25 at 7 29 27 PM](https://github.com/Yitingx531/learn_well/assets/119069886/cf6e269f-4c9e-488f-bcc9-39b4f8c075eb)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Page to view your uploaded videos and edit video info
+![Screenshot 2024-06-25 at 7 27 50 PM](https://github.com/Yitingx531/learn_well/assets/119069886/61dc2e2e-c692-45d4-8a1c-1c8e0b312f5d)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Page to create/upload a new video
+![Screenshot 2024-06-25 at 7 28 01 PM](https://github.com/Yitingx531/learn_well/assets/119069886/046bd39e-6151-45dd-b3c2-841de75845af)
 
-### Code Splitting
+Section to adjust video's screen size, volume and playback speed
+![Screenshot 2024-06-25 at 7 33 32 PM](https://github.com/Yitingx531/learn_well/assets/119069886/e2335e01-8820-427e-a89a-57c588c4f92f)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
