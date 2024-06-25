@@ -1,7 +1,5 @@
 # learn_well
 
-# Learn Well
-
 ## Overview
 
 Learn Well is a simple web application developed for an EdTech company that allows users to create, comment on, and watch educational videos. The application is built using React and interacts with a backend API to provide a seamless and engaging experience for users.
