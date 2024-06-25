@@ -1,0 +1,305 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.videoSection {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.commentSection {
+    width: 90vw;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.commentInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.commentInput textarea {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    background-color: #fff;
+}
+
+.commentInput button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4fbba2;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+.commentInput button:hover {
+    background-color: #46a68f;
+}
+
+.commentsList {
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 0;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    width: 90vw;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.commentAvatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.commentContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.commentMeta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.commentText {
+    font-size: 1rem;
+    color: #333;
+}
+
+.warning {
+    color: red;
+    margin-bottom: 0.5rem;
+}
+
+/* Playback speed controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.controls label {
+    margin-right: 0.5rem;
+}
+
+.controls input[type="range"] {
+    -webkit-appearance: none;
+    width: 5rem;
+    height: 0.25rem;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    margin-right: 0.5rem;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background: #4fbba2;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.controls input[type="range"]::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    background: #4fbba2;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.playbackRateButton {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    background-color: #4fbba2;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    margin: 0.25rem 0.25rem 0 0;
+    transition: background-color 0.3s;
+    flex: 1 1 auto;
+}
+
+.playbackRateButton:hover {
+    background-color: #3a9580;
+}
+
+.fullscreenButton,
+.closeButton {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    background-color: #4fbba2;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+    flex: 1 1 auto;
+    margin: 0.25rem 0.25rem 0 0;
+}
+
+.fullscreenButton:hover,
+.closeButton:hover {
+    background-color: #3a9580;
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.closeButton:hover {
+    background-color: transparent;
+    color: #d9534f;
+}
+
+/* Responsive adjustments for min-width: 768px and max-width: 980px */
+@media (min-width: 768px) and (max-width: 980px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .commentInput textarea {
+        font-size: 0.875rem;
+    }
+
+    .commentInput button {
+        font-size: 0.875rem;
+    }
+
+    .commentMeta {
+        font-size: 0.75rem;
+    }
+
+    .commentText {
+        font-size: 0.875rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .controls label,
+    .controls input[type="range"] {
+        margin-bottom: 0.5rem;
+    }
+
+    .playbackRateButton,
+    .fullscreenButton,
+    .closeButton {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+}
+
+/* Responsive adjustments for max-width: 767px */
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .controls label,
+    .controls input[type="range"] {
+        margin-bottom: 0.5rem;
+    }
+
+    .playbackRateButton,
+    .fullscreenButton,
+    .closeButton {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+
+    .commentSection {
+        width: 92%;
+        padding: 0.5rem;
+    }
+
+    .commentInput textarea {
+        font-size: 0.875rem;
+    }
+
+    .commentInput button {
+        font-size: 0.875rem;
+    }
+
+    .commentMeta {
+        font-size: 0.75rem;
+    }
+
+    .commentText {
+        font-size: 0.875rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .controls label,
+    .controls input[type="range"] {
+        margin-bottom: 0.5rem;
+    }
+
+    .controlRowVolumeFullscreen {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .playbackRateButton {
+        flex: 1;
+        margin: 0 0.125rem;
+    }
+}

@@ -1,0 +1,74 @@
+/* Profile.module.css */
+.container {
+    padding: 1.25rem;
+}
+
+.videoList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.videoItem {
+    padding: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    background-color: #f9f9f9;
+}
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.editForm input,
+.editForm textarea {
+    padding: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.editFormButton {
+    padding: 0.625rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 10rem;
+    align-self: flex-start;
+    margin-right: 0.625rem;
+}
+
+.saveButton {
+    background-color: #4fbba2;
+    color: white;
+}
+
+.saveButton:hover {
+    background-color: #3a9580;
+}
+
+.cancelButton {
+    background-color: #d9534f;
+    color: white;
+}
+
+.cancelButton:hover {
+    background-color: #c9302c;
+}
+
+.editButton {
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: #4fbba2;
+    color: white;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    margin-top: 0.625rem;
+}
+
+.editButton:hover {
+    background-color: #3a9580;
+}

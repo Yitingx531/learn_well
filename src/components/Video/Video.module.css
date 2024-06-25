@@ -1,0 +1,191 @@
+.playerWrapper {
+    position: relative;
+    width: 90vw;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.aspectRatioBox {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+
+.aspectRatioBoxContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.controlsSection {
+    background-color: #fff;
+    padding: 0.625rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.controlRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.controlsSection label {
+    margin-right: 0.625rem;
+}
+
+.controlsSection input[type="range"] {
+    -webkit-appearance: none;
+    width: 6.25rem;
+    height: 0.3125rem;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.controlsSection input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: #4fbba2;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.controlsSection input[type="range"]::-moz-range-thumb {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: #4fbba2;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.playbackRateButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4fbba2;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+    margin-right: 0.6rem;
+}
+
+.playbackRateButton:hover {
+    background-color: #3a9580;
+}
+
+.fullscreenButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4fbba2;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+.fullscreenButton:hover {
+    background-color: #3a9580;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    background-color: transparent;
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.closeButton:hover {
+    background-color: transparent;
+    color: #d9534f;
+}
+
+.videoTitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+    .controlsSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .controlRow {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .controlRow label,
+    .controlRow input[type="range"],
+    .controlRow button {
+        width: auto;
+        margin: 0.25rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .playerWrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .controlsSection {
+        background-color: #fff;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .controlRow {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .controlRow label,
+    .controlRow input[type="range"],
+    .controlRow button {
+        width: 100%;
+        margin: 0.25rem 0;
+    }
+
+    .controlRowPlayback {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .playbackRateButton {
+        flex: 1;
+        margin: 0 0.125rem;
+    }
+
+    .controlRowVolumeFullscreen {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
