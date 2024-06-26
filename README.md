@@ -48,6 +48,7 @@ Learn Well is a simple web application developed for an EdTech company that allo
 
 - As I do not have local videos to upload, I used YouTube video URLs to create new videos.
 - Use your first and last name in snake case as your `user_id` for creating video objects (e.g., John Smith: john_smith).
+- **Note:** Since this is for the assessment, I have also pushed the `.env` file to GitHub (which is not best practice). To ensure you can test the app, I have included a mocked `user_id` for the app to run.
 
 ## Screenshots
 
@@ -65,4 +66,3 @@ Page to create/upload a new video
 
 Section to adjust video's screen size, volume and playback speed
 ![Screenshot 2024-06-25 at 7 33 32 PM](https://github.com/Yitingx531/learn_well/assets/119069886/e2335e01-8820-427e-a89a-57c588c4f92f)
-
