@@ -11,6 +11,7 @@ Learn Well is a simple web application developed for an EdTech company that allo
 - Users can comment on videos and view comments from other users.
 - Open videos in full screen with full playback functionality.
 - Options for adjusting playback speed and volume.
+- Search Videos: Users can search for videos by title. When a search term is entered, the video list is filtered to match the search keyword. Clearing the search input will display all videos again.
 
 ## Instructions
 
