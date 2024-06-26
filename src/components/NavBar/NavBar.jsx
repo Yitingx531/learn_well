@@ -9,20 +9,20 @@ import avatar from '../../assets/images/avatar.png';
 
 const NavBar = () => {
   const [searchInput, setSearchInput] = useState('');
-  const { setSearchKeyword } = useContext(VideoContext);
+  const { handleSearch } = useContext(VideoContext);
   const navigate = useNavigate();
 
-  // debounce the setSearchKeyword function to limit the number of calls
-  const debouncedSetSearchKeyword = useCallback(
-    debounce((keyword) => setSearchKeyword(keyword), 300),
-    [setSearchKeyword]
+  // debounce the handleSearch function to limit the number of calls
+  const debouncedHandleSearch = useCallback(
+    debounce((keyword) => handleSearch(keyword), 300),
+    [handleSearch]
   );
 
   // handle changes to the search input
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchInput(value);
-    debouncedSetSearchKeyword(value);
+    debouncedHandleSearch(value);
   };
 
   // handle clicking on the profile icon to navigate to the profile page
@@ -30,13 +30,20 @@ const NavBar = () => {
     navigate('/profile'); // redirect to profile page
   };
 
+  // handle clicking on the logo to reset search input and navigate to home page
+  const handleLogoClick = () => {
+    setSearchInput(''); // clear search input
+    handleSearch(''); // reset video list
+    navigate('/'); // redirect to home page
+  };
+
   return (
     <div className={styles.topnav}>
       <div className={styles.leftnav}>
         {/* link to home page when clicking on the logo */}
-        <Link to='/'>
+        <div onClick={handleLogoClick}>
           <img className={styles.navLogo} src={Logo} alt='logo' />
-        </Link>
+        </div>
         <div className={styles.searchContainer}>
           <IoIosSearch className={styles.searchIcon} />
           <input

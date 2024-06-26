@@ -22,6 +22,10 @@
     margin-left: 1rem;
 }
 
+.navLogo:hover {
+    cursor: pointer;
+}
+
 .searchContainer {
     display: flex;
     align-items: center;

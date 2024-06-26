@@ -5,6 +5,7 @@ const VideoContext = createContext();
 
 const VideoProvider = ({ children }) => {
     const [videoList, setVideoList] = useState([]);
+    const [originalVideoList, setOriginalVideoList] = useState([]);
     const [error, setError] = useState(null);
     const [searchKeyword, setSearchKeyword] = useState('');
     const [loading, setLoading] = useState(false);
@@ -36,6 +37,7 @@ const VideoProvider = ({ children }) => {
             }));
 
             setVideoList(videosWithThumbnails); // update video list state
+            setOriginalVideoList(videosWithThumbnails); // store the original video list
             setLoading(false); // set loading state to false
         } catch (error) {
             setError(error.message); // set error state
@@ -49,14 +51,19 @@ const VideoProvider = ({ children }) => {
         fetchVideos();
     }, [URL]);
 
-    // useEffect to filter videos based on the search keyword
-    useEffect(() => {
-        const filtered = videoList.filter(video => video.title.toLowerCase().includes(searchKeyword.toLowerCase()));
-        setVideoList(filtered);
-    }, [searchKeyword]);
+    // function to handle search and reset the video list
+    const handleSearch = (keyword) => {
+        setSearchKeyword(keyword);
+        if (keyword === '') {
+            setVideoList(originalVideoList); // reset video list to all videos if search keyword is cleared
+        } else {
+            const filtered = originalVideoList.filter(video => video.title.toLowerCase().includes(keyword.toLowerCase()));
+            setVideoList(filtered);
+        }
+    };
 
     return (
-        <VideoContext.Provider value={{ videoList, error, setSearchKeyword, loading }}>
+        <VideoContext.Provider value={{ videoList, error, handleSearch, loading }}>
             {children}
         </VideoContext.Provider>
     );
