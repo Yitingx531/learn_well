@@ -11,7 +11,7 @@ const VideoProvider = ({ children }) => {
     const [loading, setLoading] = useState(false);
 
     const user_id = 'yiting_xiao'; // replace this with the actual user id
-    const URL = `https://take-home-assessment-423502.uc.r.appspot.com/api/videos?user_id=${user_id}`;
+    const URL = `${process.env.REACT_APP_URL}?user_id=${user_id}`;
 
     // function to fetch videos from the server
     const fetchVideos = async () => {
