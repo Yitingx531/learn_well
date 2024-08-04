@@ -49,7 +49,7 @@ Learn Well is a web application developed for an EdTech company that allows user
 
 - As I do not have local videos to upload, I used YouTube video URLs to create new videos.
 - Use your first and last name in snake case as your `user_id` for creating video objects (e.g., John Smith: john_smith).
-- **Note:** Since this is for the assessment, I have also pushed the `.env` file to GitHub (which is not best practice). To ensure you can test the app, I have included a mocked `user_id` for the app to run.
+- **Note:** Since this isn't a big project for production, I have also pushed the `.env` file to GitHub (which is not best practice). To ensure you can test the app, I have included a mocked `user_id` for the app to run.
 
 ## Screenshots
 
